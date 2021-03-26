@@ -3,14 +3,28 @@
 echo "Enter Three Numbers"
 read a b c
 
-result1=$(($a+$b*$c))
-echo $result1
+declare -A results
 
-result2=$(($a*$b+$c))
-echo $result2
+result=$(($a+$b*$c))
+echo $result
+results[1]=$(($a+$b*$c))
 
-result3=$(($c+$a/$b))
-echo $result3
+result=$(($a*$b+$c))
+echo $result
+results[2]=$(($a*$b+$c))
 
-result4=$(($a%$b+$c))
-echo $result4
+result=$(($c+$a/$b))
+echo $result
+results[3]=$(($c+$a/$b))
+
+result=$(($a%$b+$c))
+echo $result
+results[4]=$(($a%$b+$c))
+
+
+
+for ((i=1; i<=4; i++))
+do
+	array[$i]=${results[$i]}
+done
+echo "Arrary is -- ${array[@]}"
