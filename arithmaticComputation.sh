@@ -29,5 +29,5 @@ do
 done
 echo "Arrary is -- ${array[@]}"
 
-echo "Descending Order" $(printf "%s\n" ${array[@]} | sort -nr)
+echo "Ascending Order" $(printf "%s\n" ${array[@]} | sort -n )
 
