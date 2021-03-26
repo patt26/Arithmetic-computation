@@ -28,3 +28,6 @@ do
 	array[$i]=${results[$i]}
 done
 echo "Arrary is -- ${array[@]}"
+
+echo "Descending Order" $(printf "%s\n" ${array[@]} | sort -nr)
+
